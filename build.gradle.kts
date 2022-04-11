@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
 	id("org.springframework.boot") version "2.6.4"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
+	id("com.github.node-gradle.node") version "3.2.1"
 	kotlin("jvm") version "1.6.10"
 	kotlin("plugin.spring") version "1.6.10"
 	kotlin("plugin.jpa") version "1.6.10"
@@ -52,3 +53,17 @@ tasks.withType<KotlinCompile> {
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
+
+tasks.register<com.github.gradle.node.task.NodeTask>("buildReactApp") {
+    dependsOn("npmInstall")
+    script.set(project.file("node_modules/webpack/bin/webpack.js"))
+    args.addAll(
+        "--mode", "development",
+        "--entry", "./src/main/webapp/react/Main.component.jsx",
+        "-o", "./src/main/resources/static/dist"
+    )
+}
+
+tasks["processResources"].dependsOn(tasks["buildReactApp"])
+tasks.clean.get().delete.add(file("node_modules"))
+tasks.clean.get().delete.add(file("src/main/resources/static/dist"))
