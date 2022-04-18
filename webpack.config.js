@@ -1,3 +1,5 @@
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
+
 module.exports = {
     devtool: 'source-map',
     output: {
@@ -5,15 +7,26 @@ module.exports = {
     },
     module: {
         rules: [{
-            test: /\.(js|jsx)$/,
+            test: /\.(js|ts|tsx)$/,
             exclude: /node_modules/,
             loader: "babel-loader",
             options: {
-                presets: ['@babel/preset-env', '@babel/preset-react']
+                presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript']
             }
         }]
     },
     resolve: {
-        extensions: ['.js', '.jsx']
-    }
-};
+        extensions: ['.js', '.ts', '.tsx']
+    },
+  plugins: [
+    new ForkTsCheckerWebpackPlugin({
+      typescript: {
+        diagnosticOptions: {
+          semantic: true,
+          syntactic: true,
+        },
+        mode: "write-references",
+      },
+    }),
+  ]
+  };

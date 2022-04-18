@@ -1,14 +1,24 @@
 {
   "name": "spring-react-app",
+  "version": "0.0.1",
   "description": "Application using React with Spring Boot",
   "dependencies": {
-    "@babel/core": "^7.12.13",
-    "@babel/preset-env": "^7.12.13",
-    "@babel/preset-react": "^7.12.13",
-    "babel-loader": "^8.2.2",
-    "react": "~17.0.1",
-    "react-dom": "~17.0.1",
-    "webpack": "^5.21.2",
-    "webpack-cli": "^4.5.0"
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@babel/plugin-transform-runtime": "^7.16.7",
+    "@babel/runtime": "^7.16.7",
+    "@mui/icons-material": "^5.2.5",
+    "@mui/material": "^5.2.8",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "babel-loader": "^8.2.3",
+    "react": "~17.0.2",
+    "react-dom": "~17.0.2",
+    "fork-ts-checker-webpack-plugin": "^5.0.0-alpha.9",
+    "typescript": "^4.5.4",
+    "webpack": "^5.66.0",
+    "webpack-cli": "^4.9.1"
   }
 }
