@@ -18,6 +18,9 @@ module.exports = {
     resolve: {
         extensions: ['.js', '.ts', '.tsx']
     },
+    stats: {
+        preset: "detailed"
+    },
   plugins: [
     new ForkTsCheckerWebpackPlugin({
       typescript: {

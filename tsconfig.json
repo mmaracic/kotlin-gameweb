@@ -2,10 +2,6 @@
   "compilerOptions": {
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
