@@ -59,7 +59,7 @@ tasks.register<com.github.gradle.node.task.NodeTask>("buildReactApp") {
     script.set(project.file("node_modules/webpack/bin/webpack.js"))
     args.addAll(
         "--mode", "development",
-        "--entry", "./src/main/webapp/react/Main.component.tsx",
+        "--entry", "./src/main/webapp/react/App.component.tsx",
         "-o", "./src/main/resources/static/dist"
     )
 }
