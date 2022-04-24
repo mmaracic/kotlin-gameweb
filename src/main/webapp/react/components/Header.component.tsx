@@ -5,7 +5,7 @@ import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import MenuIcon from '@mui/icons-material/Menu';
-import { Props } from "../../utils/Props.interface";
+import { Props } from "../utils/Props.interface";
 import React from "react";
 import { backgroundLightGrayStyle, greenStyle } from "./Header.css";
 
