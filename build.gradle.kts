@@ -66,4 +66,6 @@ tasks.register<com.github.gradle.node.task.NodeTask>("buildReactApp") {
 
 tasks["processResources"].dependsOn(tasks["buildReactApp"])
 tasks.clean.get().delete.add(file("node_modules"))
+tasks.clean.get().delete.add(file("bin"))
+tasks.clean.get().delete.add(file("package-lock.json"))
 tasks.clean.get().delete.add(file("src/main/resources/static/dist"))
