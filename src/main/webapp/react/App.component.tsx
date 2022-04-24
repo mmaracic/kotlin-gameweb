@@ -1,15 +1,21 @@
+import { StyledEngineProvider, ThemeProvider } from "@mui/material/styles";
 import React from "react";
 import ReactDOM from 'react-dom';
+import { theme } from "./App.css";
 import { Header } from "./components/Header.component";
 
 export function App(): JSX.Element {
 
     return (
-    <div>
-        <Header>
+    <StyledEngineProvider injectFirst>
+        <ThemeProvider theme={theme}>
+        <div>
+            <Header>
 
-        </Header>
-    </div>
+            </Header>
+        </div>
+        </ThemeProvider>
+    </StyledEngineProvider>
     )
 }
 
