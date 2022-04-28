@@ -1,8 +1,8 @@
 import Alert from "@mui/material/Alert";
-import { Editor } from "./react/components/Editor.component";
-import { GameScene } from "./react/components/GameScene.component";
-import { PageType } from "./react/components/Header.component";
-import { Props } from "./react/utils/Props.interface";
+import { Editor } from "./components/Editor.component";
+import { GameScene } from "./components/GameScene.component";
+import { PageType } from "./components/Header.component";
+import { Props } from "./utils/Props.interface";
 
 export interface PageProps extends Props {
     pageType: PageType

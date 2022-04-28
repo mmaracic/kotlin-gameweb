@@ -8,7 +8,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import { Props } from "../utils/Props.interface";
 import React, { useState } from "react";
 import { backgroundBlueStyle } from "./Header.css";
-import { Page } from "../../Page.component";
+import { Page } from "../Page.component";
 
 export enum PageType { "Article", "Editor", "Game" }
 
