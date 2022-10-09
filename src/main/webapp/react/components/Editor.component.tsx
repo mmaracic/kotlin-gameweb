@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Props } from "../utils/Props.interface";
-import { useCodeMirror, ViewUpdate } from '@uiw/react-codemirror';
+import { useCodeMirror} from '@uiw/react-codemirror';
+import { ViewUpdate } from '@codemirror/view';
 import { markdown, markdownLanguage } from '@codemirror/lang-markdown';
 import { languages } from '@codemirror/language-data';
 import { MarkdownViewer } from "./MarkdownViever.component";
